@@ -1,0 +1,108 @@
+<div class="container">
+    <hr>
+    <div class="row row-margin-bottom" style="padding-left: 30px; padding-top: 30px;">
+        <div class="col-md-8 no-padding lib-item" data-category="view">
+            <div class="lib-panel">
+                <div class="row box-shadow">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <img class="lib-img-show" (click)="changePicture()"
+                                src="http://localhost:4000/static/estate/{{estate.address}}_{{pictureNumber}}.png">
+                        </div>
+                        <br />
+                        <div class="col d-flex justify-content-center" *ngIf="checkUser() && !offered">
+                            <table>
+                                <tr *ngIf="estate.rented">
+                                    <td class="labels">Start date rent: </td>
+                                    <td>
+                                        <input type="date" name="startDate" class="form-control" [(ngModel)]="from"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr *ngIf="estate.rented">
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr *ngIf="estate.rented">
+                                    <td class="labels">End date rent: </td>
+                                    <td>
+                                        <input type="date" name="endDate" class="form-control" [(ngModel)]="to"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr *ngIf="estate.rented">
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr *ngIf="!estate.rented">
+                                    <td class="labels">Payment method: </td>
+                                    <td> &nbsp; </td>
+                                    <td>
+                                        <input type="radio" name="method" value="loan" [(ngModel)]="method"> Loan
+                                    </td>
+                                    <td> &nbsp; </td>
+                                    <td>
+                                        <input type="radio" name="method" value="cash" [(ngModel)]="method"> Cash
+                                    </td>
+                                </tr>
+                                <tr *ngIf="!estate.rented">
+                                    <td>Participation: </td>
+                                    <td colspan="2">{{(method == "loan" ? (estate.price * 0.2) : 0)}}&euro;</td>
+                                </tr>
+                                <tr *ngIf="!estate.rented">
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button class="btn btn-primary" (click)="createOffer()">Offer</button>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div *ngIf="checkUser() && offered && !sold" style="text-align: center;">
+                            <h4>You already gave an offer!</h4>
+                        </div>
+                        <div *ngIf="checkUser() && sold" style="text-align: center;">
+                            <h4>Estate sold!</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="lib-row lib-header">
+                            <h3>
+                                Real estate description
+                            </h3>
+                            <div class="lib-header-seperator"></div>
+                        </div>
+                        <div class="lib-row lib-desc">
+                            <br />
+                            <div class="labels">Description: <span class="descriptions">{{estate.description}}</span>
+                            </div>
+                            <div class="labels">City: <span class="descriptions">{{estate.city}}</span></div>
+                            <div class="labels">Region: <span class="descriptions">{{estate.region}}</span></div>
+                            <div class="labels">Address: <span class="descriptions">{{estate.address}}</span></div>
+                            <div class="labels">Type: <span class="descriptions">{{estate.type}}</span></div>
+                            <div class="labels">Floor: <span class="descriptions">{{estate.floor}}</span></div>
+                            <div class="labels" *ngIf="estate.maxFloor != null">Max floors: <span
+                                    class="descriptions">{{estate.maxFloor}}</span></div>
+                            <div class="labels">Size: <span class="descriptions">{{estate.size}} m<sup>2</sup></span>
+                            </div>
+                            <div class="labels">Rooms: <span class="descriptions">{{estate.rooms}}</span></div>
+                            <div class="labels">Fitted: <span class="descriptions">{{estate.fitted}}</span></div>
+                            <div class="labels">Price: <span class="descriptions">{{estate.price}}&euro;</span></div>
+                            <br />
+                            <div class="col d-flex justify-content-end" *ngIf="checkUser()">
+                                <button class="btn btn-primary" (click)="contact()">Contact</button>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

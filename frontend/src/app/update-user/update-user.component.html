@@ -1,0 +1,114 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <div class="row flex-lg-nowrap">
+        <div class="col">
+            <div class="row">
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="e-profile">
+                                <div class="row">
+                                    <div class="col-12 col-sm-auto mb-3">
+                                        <div class="mx-auto" style="width: 140px;">
+                                            <div class="d-flex justify-content-center align-items-center rounded"
+                                                style="height: 140px; background-color: rgb(233, 236, 239);">
+                                                <img src="http://localhost:4000/static/userImages/{{pictureName}}.png"
+                                                    height="100%" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                        <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                            <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{oldUser.firstname}}
+                                                {{oldUser.lastname}}</h4>
+                                            <p class="mb-0">@{{oldUser.username}}</p>
+                                            <div class="text-muted label-title"><small>Offline</small></div>
+                                            <div class="mt-2">
+                                                <input type="file" name="choose-file" size="80"
+                                                    (change)="onFileChange($event)" accept="image/png" />
+                                                <i class="fa fa-fw fa-camera"></i>
+                                                <span>Change Photo</span>
+                                            </div>
+                                        </div>
+                                        <div class="text-center text-sm-right">
+                                            <div class="bagde-secondary">{{oldUser.type}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item"><a href="" class="active nav-link">Settings</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content pt-3">
+                                    <div class="tab-pane active">
+                                        <form class="form" name="change-form" (ngSubmit)="changeData()">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label class="label-title">First name</label>
+                                                                <input class="form-control" type="text" name="firstname"
+                                                                    placeholder="{{oldUser.firstname}}"
+                                                                    [(ngModel)]="newUser.firstname">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label class="label-title">Lastname</label>
+                                                                <input class="form-control" type="text" name="lastname"
+                                                                    placeholder="{{oldUser.lastname}}"
+                                                                    value="{{oldUser.lastname}}"
+                                                                    [(ngModel)]="newUser.lastname">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label class="label-title">City</label>
+                                                                <input class="form-control" name="city" type="text"
+                                                                    placeholder="{{oldUser.city}}"
+                                                                    [(ngModel)]="newUser.city">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label class="label-title">Country</label>
+                                                                <input class="form-control" type="text" name="country"
+                                                                    placeholder="{{oldUser.country}}"
+                                                                    [(ngModel)]="newUser.country">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label class="label-title">Type</label>
+                                                        <select class="form-control" name="type"
+                                                            [(ngModel)]="newUser.type">
+                                                            <option value="regular">Regular</option>
+                                                            <option value="agent">Agent</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col d-flex justify-content-end">
+                                                    <button class="btn btn-primary" type="submit">Save Changes</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

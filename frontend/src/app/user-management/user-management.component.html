@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <h2 style="text-align: center; margin-top: 30px;">User Management</h2>
+    <hr>
+
+    <div style="display: block; text-align: center;">
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive-sm">
+                    <form class="form">
+                        <div class="container" style="align-items: center; justify-content: center;">
+                            <table class="table table-hover table-dark">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <td>Firstname</td>
+                                        <td>Lastname</td>
+                                        <td>Username</td>
+                                        <td>Type</td>
+                                        <td>Update</td>
+                                        <td>Delete</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let u of users">
+                                        <td>{{u.firstname}}</td>
+                                        <td>{{u.lastname}}</td>
+                                        <td>{{u.username}}</td>
+                                        <td>{{u.type}}</td>
+                                        <td>
+                                            <button class="btn" (click)="updateUser(u)">Update</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn" (click)="deleteUser(u.username)">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

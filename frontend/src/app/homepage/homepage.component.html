@@ -1,0 +1,112 @@
+<app-promoted-estate *ngIf="!checkUser()">
+
+</app-promoted-estate>
+<div *ngIf="!checkUser()">
+    <div class="container">
+        <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Real Estate</h1>
+
+        <hr class="mt-2 mb-5">
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-1" style="text-align: center;">
+            <label for="searchCity" class="label-title">City:</label>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input type="search" name="searchCity" class="form-control rounded" placeholder="City"
+                    aria-label="Search" aria-describedby="search-addon" [(ngModel)]="city" />
+            </div>
+        </div>
+        <div class="col-sm-1" style="text-align: center;">
+            <label for="lower-price" class="label-title">Min:</label>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input type="search" name="lower-price" class="form-control rounded" placeholder="Lower"
+                    aria-label="Search" aria-describedby="search-addon" [(ngModel)]="lowerPrice" />
+            </div>
+        </div>
+        <div class="col-sm-1" style="text-align: center;">
+            <label for="upper-price" class="label-title">Max:</label>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input type="search" name="upper-price" class="form-control rounded" placeholder="Upper"
+                    aria-label="Search" aria-describedby="search-addon" [(ngModel)]="upperPrice" />
+                <button type="button" class="btn btn-outline-primary" (click)="getFilteredEstates()">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div *ngIf="estates && !checkUser()">
+    <app-estate-card [estates]="estates">
+
+    </app-estate-card>
+</div>
+
+<br />
+<div class="container" *ngIf="checkUser()">
+    <div class="row">
+        <div class="col-6">
+            <h3>Estate chart</h3>
+            <app-flat-chart>
+
+            </app-flat-chart>
+        </div>
+        <div class="col-6">
+            <h3>Estates in cities chart</h3>
+            <app-city-estate-chart>
+
+            </app-city-estate-chart>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <h3>Renting price chart</h3>
+            <app-rent-price-chart>
+
+            </app-rent-price-chart>
+        </div>
+        <div class="col-6">
+            <h3>Buy price chart</h3>
+            <app-buy-price-chart>
+
+            </app-buy-price-chart>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="checkAdmin()">
+    <div class="row">
+        <div class="col-sm-1" style="text-align: center;">
+            <label for="rent-percent" class="label-title">Percent for renting:</label>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input type="number" name="rent-percent" class="form-control rounded" placeholder="" aria-label="Search"
+                    aria-describedby="search-addon" [(ngModel)]="percentRenting" />
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <button type="button" class="btn btn-outline-primary" (click)="setRenting()">Submit</button>
+            </div>
+        </div>
+        <div class="col-sm-1" style="text-align: center;">
+            <label for="buy-percent" class="label-title">Percent for selling:</label>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input type="number" name="buy-percent" class="form-control rounded" placeholder="" aria-label="Search"
+                    aria-describedby="search-addon" [(ngModel)]="percentSelling" />
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <button type="button" class="btn btn-outline-primary" (click)="setSelling()">Submit</button>
+            </div>
+        </div>
+
+    </div>

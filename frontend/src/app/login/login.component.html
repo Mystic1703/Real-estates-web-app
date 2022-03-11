@@ -1,0 +1,54 @@
+<!-- <div class="container">
+    <form class="text-center border border-light p-5" name="registration" enctype="multipart/form-data"
+        (ngSubmit)="login()" ngNativeValidate>
+        <p class="h4 mb-4">Login</p>
+
+        <div class="row">
+            <div class="col-3" style="justify-content: center; display: flex;">
+                <input type="text" name="username" class="form-control" placeholder="Username" required="true"
+                    [(ngModel)]="username" />
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-3" style="justify-content: center; display: flex;">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required="true"
+                        [(ngModel)]="password"
+                        pattern="^(?=.* ?[A-Z])(?=.* ?[a-z])(?=.* ?[0-9])(?=.* ?[#?!@$%^&*-]).{8,24}$" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3" style="justify-content: center; display: flex;">
+                <button class="btn btn-info my-4 btn-block waves-effect waves-light" (click)="login()">Login</button>
+            </div>
+        </div>
+    </form>
+</div> -->
+<h2 style="text-align: center; margin-top: 30px;">Login</h2>
+<hr>
+<div style="display: block; text-align: center;">
+    <form class="form" name="registration" enctype="multipart/form-data" (ngSubmit)="login()" ngNativeValidate>
+        <div class="container" style="align-items: center; justify-content: center;">
+            <div class="row">
+                <div class="col">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required [(ngModel)]="username">
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col">
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required [(ngModel)]="password"
+                        pattern="^(?=.* ?[A-Z])(?=.* ?[a-z])(?=.* ?[0-9])(?=.* ?[#?!@$%^&*-]).{8,24}$">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="submit">Login</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,65 @@
+<div class="container">
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Approve Offers</h1>
+
+    <hr class="mt-2 mb-5">
+</div>
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let o of offers">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>{{o.estate}}</h2>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td class="column-label">Bidder:</td>
+                                <td class="column-info">{{o.bidder}}</td>
+                            </tr>
+                            <tr>
+                                <td class="column-label">Price:</td>
+                                <td class="column-info">{{o.price}}&euro;</td>
+                            </tr>
+                            <tr>
+                                <td class="column-label">For rent:</td>
+                                <td class="column-info">{{o.renting}}</td>
+                            </tr>
+                            <tr *ngIf="o.renting">
+                                <td class="column-label">From:</td>
+                                <td class="column-info">{{prettyDate(o.from.toString())}}</td>
+                            </tr>
+                            <tr *ngIf="o.renting">
+                                <td class="column-label">To:</td>
+                                <td class="column-info">{{prettyDate(o.to.toString())}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br />
+                    <div class="card-footer">
+                        <!-- <div class="row">
+                            <div class="col d-flex">
+                                <div class="justify-content-start">
+                                    <button class="btn btn-danger" (click)="discard(o)">Discard offer</button>
+                                    &nbsp;
+                                </div>
+                                <div class="justify-content-end">
+                                    &nbsp;
+                                    <button class="btn btn-primary" (click)="approve(o)">Approve offer</button>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="col d-flex justify-content-end">
+                            <button class="btn btn-success" (click)="approve(o)">Approve offer</button>
+                        </div>
+                        <div class="col d-flex justify-content-end" style="padding-top: 15px;">
+                            <button class="btn btn-danger" (click)="discard(o)">Discard offer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

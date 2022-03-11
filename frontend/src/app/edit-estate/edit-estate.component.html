@@ -1,0 +1,85 @@
+<div class="container">
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Edit Real estates</h1>
+
+    <hr class="mt-2 mb-5">
+</div>
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let e of estates">
+            <div class="card" style="border: 0;">
+                <div class="image">
+                    <img src="http://localhost:4000/static/estate/{{e.address}}_1.png" width="350px" height="200px" />
+                </div>
+                <div class="card-inner">
+                    <div class="header">
+                        <!-- <h2>{{e.type}}</h2>
+                        <h3>{{e.price}}&euro;</h3> -->
+                    </div>
+                    <br />
+                    <div class="content">
+                        <form enctype="multipart/form-data">
+                            <table>
+                                <tr>
+                                    <td class="column-label">
+                                        Change description:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="description" class="form-control"
+                                            [(ngModel)]="e.description">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="column-label">
+                                        Change price:
+                                    </td>
+                                    <td>
+                                        <input type="number" name="price" class="form-control" [(ngModel)]="e.price">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="column-label">Fitted: </td>
+                                    <td class="column-info">
+                                        <select name="rent" class="form-control" [(ngModel)]="e.fitted">
+                                            <option>{{e.fitted}}</option>
+                                            <option>{{!e.fitted}}</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="column-label">Add images:</td>
+                                    <td class="column-info">
+                                        <input type="file" name="choose-file" (change)="onFileChange($event)" multiple
+                                            accept="image/png" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <br />
+                    <div class="card-footer">
+                        <div class="col d-flex justify-content-end">
+                            <button class="btn btn-primary" (click)="change(e)">Change</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

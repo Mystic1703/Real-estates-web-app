@@ -1,0 +1,26 @@
+<div class="header">
+    <ul>
+        <li><a routerLink="homepage">Home</a></li>
+        <!-- <li><a href="#contact">Contact</a></li> -->
+        <li *ngIf="checkAgent() || checkRegular()"><a routerLink="edit-estate">Edit estates</a></li>
+        <li *ngIf="checkAdmin()"><a routerLink="user-management">User Management</a></li>
+        <li *ngIf="checkAdmin()"><a routerLink="registration-management">Registration Management</a></li>
+        <li *ngIf="checkAdmin()"><a routerLink="create-user">Add User</a></li>
+        <li *ngIf="checkAgent() || checkAdmin()"><a routerLink="approve-estate">Estate management</a></li>
+        <li *ngIf="checkAgent()"><a routerLink="approve-offer">Approve Offers</a></li>
+        <li *ngIf="checkAgent() || checkAdmin()"><a routerLink="approved-offers">Check offers</a>
+        <li *ngIf="checkAgent() || checkRegular()"><a routerLink="inbox">Inbox</a></li>
+        <li *ngIf="loggedUser != null"><a routerLink="create-estate">Add estate</a></li>
+        <li style="float:right" *ngIf="loggedUser != null"><a class="active" (click)="logout()">Log out</a></li>
+        <li style="float:right" *ngIf="loggedUser == null"><a class="active" routerLink="login">Sign In</a></li>
+        <li style="float:right" *ngIf="loggedUser != null"><a class="active" routerLink="profile">Profile</a></li>
+        <li style="float:right" *ngIf="loggedUser == null"><a class="active" routerLink="register">Register</a></li>
+    </ul>
+</div>
+
+<!-- 
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand active" routerLink="homepage">Home</a>
+    <a class="navbar-brand active" href="login">Sign in</a>
+    <a class="navbar-brand active" href="#">Sign in</a>
+</nav> -->

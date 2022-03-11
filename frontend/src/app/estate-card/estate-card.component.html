@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let e of estates">
+            <div class="card">
+                <div class="image">
+                    <img src="http://localhost:4000/static/estate/{{e.address}}_{{generateNumber(e)}}.png" width="350px"
+                        height="200px" />
+                </div>
+                <div class="card-inner">
+                    <div class="header">
+                        <h2>{{e.description}}</h2>
+                        <h3>{{e.price}}&euro;</h3>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td class="column-label">City:</td>
+                                <td class="column-info">{{e.city}}</td>
+                            </tr>
+                            <tr>
+                                <td class="column-label">Region:</td>
+                                <td class="column-info">{{e.region}}</td>
+                            </tr>
+                            <tr>
+                                <td class="column-label">Address:</td>
+                                <td class="column-info">{{e.address}}</td>
+                            </tr>
+                            <tr>
+                                <td class="column-label">Size:</td>
+                                <td class="column-info">{{e.size}}m<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td class="column-label">Type:</td>
+                                <td class="column-info">{{e.type}}</td>
+                            </tr>
+                            <tr>
+                                <td class="column-label">Rented:</td>
+                                <td class="column-info">{{e.rented}}</td>
+                            </tr>
+                            <tr>
+                                <td class="column-label">Fitted:</td>
+                                <td class="column-info">{{e.fitted}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br />
+                    <div class="card-footer">
+                        <div class="col d-flex justify-content-end">
+                            <button class="btn btn-primary" (click)="estateDetails(e)">More details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

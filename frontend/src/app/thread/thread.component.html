@@ -1,0 +1,31 @@
+<h2 (change)="getAllConversations()">{{title}}</h2>
+<br />
+<select class="form-select form-select-lg mb-3" name="username-select" aria-label=".form-select-lg example"
+    (change)="getAllMessages()" [(ngModel)]="selectedUsername">
+    <option *ngFor="let i of interlocutors" name="username-option" value="{{i}}">
+        {{getOptionLabel(i)}}
+    </option>
+</select>
+<br />
+
+<div *ngIf="messages">
+    <app-chat [messages]="messages" class="scroll">
+
+    </app-chat>
+    <div class="input-group mb-3" *ngIf="messages.length > 0">
+        <input type="text" class="form-control" placeholder="Enter your message..." aria-label="Recipient's username"
+            aria-describedby="basic-addon2" [(ngModel)]="newMessage">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" (click)="sendMessage()">Send message</button>
+        </div>
+    </div>
+    <div *ngIf="checkOwner() && selectedUsername && !offerGiven">
+        <button name="offer" class="btn btn-primary" (click)="offer()">Give offer</button>
+        <br />
+    </div>
+    <div *ngIf="!checkOwner() && selectedUsername && offerGiven && canAccept">
+        <button type="button" class="btn btn-success" (click)="accept()">Accept offer</button>
+        <button type="button" class="btn btn-danger" style="margin-left: 20px;" (click)="decline()">Decline
+            offer</button>
+    </div>
+</div>

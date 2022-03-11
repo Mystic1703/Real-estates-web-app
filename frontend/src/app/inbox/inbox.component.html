@@ -1,0 +1,33 @@
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand" style="color: white; text-decoration: underline; font-weight: bold;">
+                Estate conversations
+            </li>
+            <li *ngFor="let t of titles">
+                <a (click)="getMessageTitle(t)">{{t}}</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div *ngIf="messageTitle">
+                        <app-thread [title]="messageTitle">
+
+                        </app-thread>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->

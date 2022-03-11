@@ -1,0 +1,82 @@
+<div class="container-fluid" style="justify-content: center; display: flex">
+    <form class="text-center border border-light p-5" name="create-estate" enctype="multipart/form-data"
+        (ngSubmit)="createEstate()" ngNativeValidate>
+        <p class="h4 mb-4">Add your estate</p>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <input type="text" name="description" class="form-control" placeholder="Description"
+                    [(ngModel)]="description" required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" name="city" class="form-control" placeholder="City" [(ngModel)]="city"
+                    required="true">
+            </div>
+            <div class="col">
+                <input type="text" name="region" class="form-control" placeholder="Region" [(ngModel)]="region"
+                    required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" name="address" class="form-control" placeholder="Address" [(ngModel)]="address"
+                    required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="label">Type: &nbsp;</span>
+                <input type="radio" name="type" value="house" [(ngModel)]="type" checked="checked">House &nbsp;
+                <input type="radio" name="type" value="flat" style="padding-right: 30px;" [(ngModel)]="type">Flat
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="number" name="floor" class="form-control" placeholder="Floor" [(ngModel)]="floor"
+                    required="true">
+            </div>
+            <div class="col" *ngIf="type == 'flat' ">
+                <input type="number" name="max-floor" class="form-control" placeholder="Highest floor"
+                    [(ngModel)]="maxFloor" required="true">
+            </div>
+            <div class="col">
+                <input type="number" name="size" class="form-control" placeholder="Size" [(ngModel)]="size"
+                    required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" name="rooms" class="form-control" placeholder="Rooms" [(ngModel)]="rooms"
+                    required="true">
+            </div>
+            <div class="col">
+                <span class="label">Fitted: &nbsp;</span>
+                <input type="radio" name="fitted" value="yes" [(ngModel)]="fitted">Yes &nbsp;
+                <input type="radio" name="fitted" value="no" [(ngModel)]="fitted" checked="checked">No
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="label">For rent: &nbsp;</span>
+                <input type="radio" name="rented" value="yes" [(ngModel)]="rented">Yes &nbsp;
+                <input type="radio" name="rented" value="no" [(ngModel)]="rented">No
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="price" placeholder="Price" [(ngModel)]="price"
+                    required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="label">Upload:</span>
+                <input type="file" name="choose-file" (change)="onFileChange($event)" accept="image/png" required="true"
+                    multiple />
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

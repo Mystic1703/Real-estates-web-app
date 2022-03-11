@@ -1,0 +1,16 @@
+.column-label {
+    font-size: medium;
+}
+
+.tr {
+    padding-bottom: 25px;
+}
+
+.form-control {
+    width: fit-content;
+}
+
+.column-info {
+    text-align: center;
+    font-weight: lighter;
+  }

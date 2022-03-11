@@ -1,0 +1,15 @@
+<div [class.scroll]="messages.length > 0">
+    <div *ngFor="let m of messages">
+        <div class="container" *ngIf="checkMessageSide(m)">
+            <img src="{{avatar_url_logged}}" alt="Avatar">
+            <p>{{m.content}}</p>
+            <span class="time-right">{{getDateAndTime(m)}}</span>
+        </div>
+
+        <div class="container darker" *ngIf="!checkMessageSide(m)">
+            <img src="{{avatar_url_interlocutor}}" alt="Avatar" class="right">
+            <p>{{m.content}}</p>
+            <span class="time-left">{{getDateAndTime(m)}}</span>
+        </div>
+    </div>
+</div>

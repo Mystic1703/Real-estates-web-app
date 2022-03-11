@@ -1,0 +1,29 @@
+<!-- Page Content -->
+<div class="container">
+
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Promoted real estate</h1>
+
+    <hr class="mt-2 mb-5">
+
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let e of promotedEstates">
+            <label for="card" class="label-title">{{e.address}}</label>
+            <div class="card" name="card" width="100%" height="100%">
+                <div class="image">
+                    <img class="img-fluid img-thumbnail" src="http://localhost:4000/static/estate/{{e.address}}_1.png"
+                        width="100%" />
+                </div>
+                <!-- <div class="card-inner" *ngIf="user != null"> -->
+                <div class="card-inner">
+                    <div class="col d-flex justify-content-end" *ngIf="user">
+                        <button class="btn btn-lg btn-primary"
+                            style="border:none; display:inline-block; width: 100%; background-color: #1bba93;"
+                            (click)="estateDetails(e)">More
+                            details</button>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

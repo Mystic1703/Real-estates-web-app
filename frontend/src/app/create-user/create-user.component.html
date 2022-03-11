@@ -1,0 +1,134 @@
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="create-user" (ngSubmit)="create()" ngNativeValidate>
+                <div class="creation-form">
+                    <div class="form-header">
+                        <h1>Create user</h1>
+                    </div>
+                    <div class="form-body">
+                        <div class="horizontal-group">
+                            <div class="form-group left">
+                                <label for="firstname" class="label-title">First name *</label>
+                                <input type="text" name="firstname" class="form-input"
+                                    placeholder="enter your first name" required="true" [(ngModel)]="firstname" />
+                            </div>
+                            <div class="form-group right">
+                                <label for="lastname" class="label-title">Last name *</label>
+                                <input type="text" name="lastname" class="form-input" placeholder="enter your last name"
+                                    required="true" [(ngModel)]="lastname" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="label-title">Email*</label>
+                            <input type="email" name="email" class="form-input" placeholder="enter your email"
+                                required="true" [(ngModel)]="mail" />
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="label-title">Username*</label>
+                            <input type="text" name="username" class="form-input" placeholder="enter your username"
+                                required="true" [(ngModel)]="username" />
+                        </div>
+                        <div class="horizontal-group">
+                            <div class="form-group left">
+                                <label for="password" class="label-title">Password *</label>
+                                <input type="password" name="password" class="form-input"
+                                    pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,24}$"
+                                    placeholder="enter your password" required="true" [(ngModel)]="password" />
+                            </div>
+                            <div class="form-group right">
+                                <label for="type" class="label-title">Type *</label>
+                                <div class="form-input-radio">
+                                    <input type="radio" name="user-type" value="regular" [(ngModel)]="type">Registered
+                                    user
+                                    <input type="radio" name="user-type" value="agent" [(ngModel)]="type"> Agent
+                                </div>
+                            </div>
+                        </div>
+                        <div class="horizontal-group">
+                            <div class="form-group left">
+                                <label for="city" class="label-title">City *</label>
+                                <input type="text" name="city" class="form-input" placeholder="enter your city"
+                                    required="true" [(ngModel)]="city" />
+                            </div>
+                            <div class="form-group right">
+                                <label for="country" class="label-title">Country *</label>
+                                <input type="text" class="form-input" name="country" placeholder="enter your country"
+                                    required="true" [(ngModel)]="country" />
+                            </div>
+                        </div>
+                        <div class="horizontal-group">
+                            <div class="form-group left">
+                                <label for="choose-file" class="label-title">Upload Profile Picture </label>
+                                <input type="file" name="choose-file" size="80" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn">Create</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid" style="justify-content: center; display: flex">
+    <form class="text-center border border-light p-5" name="create-estate" enctype="multipart/form-data"
+        (ngSubmit)="create()" ngNativeValidate>
+        <p class="h4 mb-4">Create User</p>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <input type="text" name="name" class="form-control" placeholder="First name" [(ngModel)]="firstname"
+                    required="true">
+            </div>
+            <div class="col">
+                <input type="text" name="surname" class="form-control" placeholder="Last name" [(ngModel)]="lastname"
+                    required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" name="city" class="form-control" placeholder="City" [(ngModel)]="city"
+                    required="true">
+            </div>
+            <div class="col">
+                <input type="text" name="country" class="form-control" placeholder="Country" [(ngModel)]="country"
+                    required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" name="username" class="form-control" placeholder="Username" [(ngModel)]="username"
+                    required="true">
+            </div>
+            <div class="col">
+                <input type="text" name="mail" class="form-control" placeholder="E-mail" [(ngModel)]="mail"
+                    required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="label">Type: &nbsp;</span>
+                <input type="radio" name="type" value="regular" [(ngModel)]="type">Regular User &nbsp;
+                <input type="radio" name="type" value="agent" style="padding-right: 30px;" [(ngModel)]="type">Agent
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="password" name="password" [(ngModel)]="password" placeholder="Password" required
+                    pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,24}$">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="label">Upload:</span>
+                <input type="file" name="choose-file" (change)="onFileChange($event)" required="true" />
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
