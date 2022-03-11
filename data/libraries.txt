@@ -1,0 +1,13 @@
+*FRONTEND*
+npm install ng2-charts@2.4.2 --save
+npm install chart.js --save
+npm install sweetalert2 --save -> angular.json -> styles -> "node_modules/sweetalert2/src/sweetalert2.scss"
+npm install bootstrap
+
+*BACKEND*
+npm install express
+npm install mongoose
+npm install body-parser
+npm install cors
+npm install typescript
+npm install formidable

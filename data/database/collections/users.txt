@@ -1,0 +1,138 @@
+/* 1 */
+{
+    "_id" : ObjectId("60c397e851803121ce0d4e89"),
+    "username" : "aleksa017",
+    "firstname" : "Aleksa",
+    "lastname" : "Mitic",
+    "password" : "Aleksa123!",
+    "city" : "Varvarin",
+    "country" : "Serbia",
+    "type" : "administrator",
+    "approved" : true,
+    "mail" : "miticaleksa@gmail.com",
+    "avatar" : true
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("60c89594d7edef3ac8f7b6b8"),
+    "username" : "jovan123",
+    "firstname" : "Jovan",
+    "lastname" : "Jovanovic",
+    "password" : "Jovan123!",
+    "city" : "Kragujevac",
+    "country" : "Serbia",
+    "type" : "regular",
+    "approved" : true,
+    "avatar" : true,
+    "mail" : "jovan@gmail.com"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("60c90c27d1ddb229a84aae9a"),
+    "username" : "mika123",
+    "firstname" : "Mika",
+    "lastname" : "Mikic",
+    "password" : "Mika123!",
+    "city" : "Kragujevac",
+    "country" : "Serbia",
+    "type" : "regular",
+    "approved" : true,
+    "avatar" : true,
+    "mail" : "mika@gmail.com"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("60c90c4fd1ddb229a84aae9b"),
+    "username" : "pera123",
+    "mail" : "pera@gmail.com",
+    "firstname" : "Pera",
+    "lastname" : "Peric",
+    "password" : "Mika123!",
+    "city" : "Kragujevac",
+    "country" : "Serbia",
+    "type" : "agent",
+    "approved" : true,
+    "avatar" : true,
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("60cb16dbc838b2436c051f71"),
+    "username" : "sasvim_prirodno",
+    "firstname" : "Jovan",
+    "lastname" : "Memedovic",
+    "password" : "Jovan123!",
+    "city" : "Krusevac",
+    "country" : "Serbia",
+    "type" : "regular",
+    "approved" : true,
+    "avatar" : true,
+    "mail" : "prirodno@gmail.com"
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("60cb2ad3c838b2436c051f72"),
+    "username" : "zika007",
+    "mail" : "zika@gmail.com",
+    "firstname" : "Zika",
+    "lastname" : "Zikic",
+    "password" : "Zika123!",
+    "city" : "Nis",
+    "country" : "Serbia",
+    "type" : "regular",
+    "avatar" : true,
+    "approved" : true,
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("60d4faa7b26efc04c8921b58"),
+    "username" : "zora123",
+    "firstname" : "Zora",
+    "lastname" : "Zoric",
+    "password" : "Zora123!",
+    "city" : "Nis",
+    "country" : "Serbia",
+    "type" : "agent",
+    "approved" : true,
+    "mail" : "zora@gmail.com",
+    "avatar" : true
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("60d5eebfdacbf54cbcd3cd07"),
+    "username" : "iva123",
+    "mail" : "iva@gmail.com",
+    "firstname" : "Iva",
+    "lastname" : "Ivic",
+    "password" : "Iva1234!",
+    "city" : "Zajecar",
+    "country" : "Serbia",
+    "type" : "regular",
+    "avatar" : false,
+    "approved" : false,
+    "__v" : 0
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("60d612fcc9760935b43a0cf0"),
+    "username" : "koca123",
+    "mail" : "koca@gmail.com",
+    "firstname" : "Koca",
+    "lastname" : "Kocic",
+    "password" : "Koca123!",
+    "city" : "Negotin",
+    "country" : "Serbia",
+    "type" : "regular",
+    "avatar" : true,
+    "approved" : true,
+    "__v" : 0
+}

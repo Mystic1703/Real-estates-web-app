@@ -1,0 +1,238 @@
+/* 1 */
+{
+    "_id" : ObjectId("60d388969027160df01e0928"),
+    "id" : 1,
+    "estate" : "Neka adresa bb",
+    "bidder" : "jovan123",
+    "approved" : false,
+    "active" : false,
+    "price" : 30000,
+    "renting" : false,
+    "to" : null,
+    "from" : null,
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("60d3a37f9027160df01e092b"),
+    "id" : 2,
+    "estate" : "Mija Kovacevic 7B",
+    "bidder" : "mika123",
+    "approved" : true,
+    "active" : true,
+    "price" : 150,
+    "renting" : true,
+    "to" : "2019-03-18T00:00:00.000Z",
+    "from" : "2018-12-23T00:00:00.000Z",
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("60d3cab8dac96611ef896612"),
+    "estate" : "Knjeginja Ljubica 23",
+    "bidder" : "zika007",
+    "approved" : true,
+    "active" : true,
+    "price" : 300000,
+    "renting" : false,
+    "to" : null,
+    "from" : null,
+    "id" : 4
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("60d461a1747ca90bf81b8a2e"),
+    "estate" : "Savski Bulevar 43",
+    "bidder" : "jovan123",
+    "approved" : true,
+    "active" : true,
+    "price" : 750,
+    "renting" : false,
+    "to" : null,
+    "from" : null,
+    "id" : 5,
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("60d47bac1cf3c03cec8535de"),
+    "estate" : "Mija Kovacevic 7B",
+    "bidder" : "mika123",
+    "approved" : true,
+    "active" : true,
+    "price" : 150,
+    "renting" : true,
+    "to" : "2019-11-13T00:00:00.000Z",
+    "from" : "2019-08-20T00:00:00.000Z",
+    "id" : 6,
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("60d5c1e1ac12154e10794b7b"),
+    "estate" : "Mija Kovacevic 7B",
+    "bidder" : "sasvim_prirodno",
+    "approved" : true,
+    "active" : true,
+    "price" : 100,
+    "renting" : true,
+    "to" : "2019-08-15T00:00:00.000Z",
+    "from" : "2019-07-15T00:00:00.000Z",
+    "id" : 7,
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("60d5cc90ac12154e10794b7f"),
+    "estate" : "Mija Kovacevic 7B",
+    "bidder" : "sasvim_prirodno",
+    "approved" : false,
+    "active" : false,
+    "price" : 150,
+    "renting" : true,
+    "to" : "2020-05-02T00:00:00.000Z",
+    "from" : "2020-02-23T00:00:00.000Z",
+    "id" : 9,
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("60d726bec9760935b43a0cf5"),
+    "estate" : "Bulevar Oslobodjenja 45",
+    "bidder" : "koca123",
+    "approved" : true,
+    "active" : true,
+    "price" : 1200,
+    "renting" : true,
+    "to" : "2019-07-20T00:00:00.000Z",
+    "from" : "2019-04-23T00:00:00.000Z",
+    "id" : 11,
+    "__v" : 0
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("60d726eac9760935b43a0cf7"),
+    "estate" : "Bulevar Oslobodjenja 45",
+    "bidder" : "mika123",
+    "approved" : true,
+    "active" : true,
+    "price" : 1200,
+    "renting" : true,
+    "to" : "2019-11-20T00:00:00.000Z",
+    "from" : "2019-08-25T00:00:00.000Z",
+    "id" : 12,
+    "__v" : 0
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("60d72ff8c9760935b43a0cfa"),
+    "estate" : "Mite Ruzica 145",
+    "bidder" : "mika123",
+    "active" : true,
+    "approved" : true,
+    "price" : 120000,
+    "renting" : false,
+    "to" : null,
+    "from" : null,
+    "id" : 13,
+    "__v" : 0
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("60d907ce0bed034e0812dd4b"),
+    "estate" : "Bulevar Zorana Djindjica 12",
+    "bidder" : "jovan123",
+    "approved" : false,
+    "active" : false,
+    "price" : 600,
+    "renting" : true,
+    "to" : "2019-04-28T00:00:00.000Z",
+    "from" : "2019-01-15T00:00:00.000Z",
+    "id" : 14,
+    "__v" : 0
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("60d9bbce0bed034e0812dd4e"),
+    "estate" : "Bulevar Zorana Djindjica 12",
+    "bidder" : "koca123",
+    "approved" : false,
+    "active" : false,
+    "price" : 600,
+    "renting" : true,
+    "to" : "2019-07-03T00:00:00.000Z",
+    "from" : "2019-03-25T00:00:00.000Z",
+    "id" : 15,
+    "__v" : 0
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("60d9bc640bed034e0812dd50"),
+    "estate" : "Bulevar Zorana Djindjica 12",
+    "bidder" : "sasvim_prirodno",
+    "approved" : true,
+    "active" : true,
+    "price" : 300,
+    "renting" : true,
+    "to" : "2019-11-12T00:00:00.000Z",
+    "from" : "2019-09-21T00:00:00.000Z",
+    "id" : 16,
+    "__v" : 0
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("60d9be400bed034e0812dd53"),
+    "estate" : "Bulevar Zorana Djindjica 12",
+    "bidder" : "sasvim_prirodno",
+    "approved" : false,
+    "active" : false,
+    "price" : 600,
+    "renting" : true,
+    "to" : "2020-06-27T00:00:00.000Z",
+    "from" : "2020-03-15T00:00:00.000Z",
+    "id" : 17,
+    "__v" : 0
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("60d9c18f0bed034e0812dd57"),
+    "estate" : "Bulevar kralja Aleksandra 154",
+    "bidder" : "jovan123",
+    "approved" : false,
+    "active" : false,
+    "price" : 1500,
+    "renting" : true,
+    "to" : "2020-08-29T00:00:00.000Z",
+    "from" : "2020-04-01T00:00:00.000Z",
+    "id" : 19,
+    "__v" : 0
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("60d9c1680bed034e0812dd55"),
+    "estate" : "Bulevar kralja Aleksandra 154",
+    "bidder" : "koca123",
+    "approved" : false,
+    "active" : true,
+    "price" : 1250,
+    "renting" : true,
+    "to" : "2020-06-23T00:00:00.000Z",
+    "from" : "2020-02-15T00:00:00.000Z",
+    "id" : 18,
+    "__v" : 0
+}

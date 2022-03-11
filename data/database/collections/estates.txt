@@ -1,0 +1,200 @@
+/* 1 */
+{
+    "_id" : ObjectId("60cb3272dac96611ef87bfda"),
+    "description" : "kuca na Dorcolu",
+    "city" : "Belgrade",
+    "region" : "Stari grad",
+    "address" : "Knjeginja Ljubica 23",
+    "type" : "house",
+    "floor" : 2,
+    "maxFloor" : null,
+    "size" : 130,
+    "rooms" : "dve spavace sobe, dnevna soba i kupatilo",
+    "fitted" : true,
+    "rented" : false,
+    "price" : 250000,
+    "owner" : "jovan123",
+    "pictures" : 2,
+    "promoted" : false,
+    "sold" : true,
+    "approved" : true
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("60cb4063dac96611ef87c446"),
+    "description" : "trosoban stab u BW",
+    "owner" : "mika123",
+    "size" : 120,
+    "floor" : 7,
+    "maxFloor" : 15,
+    "fitted" : "true",
+    "rented" : false,
+    "pictures" : 1,
+    "rooms" : "tri spavace sobe, dnevna soba i kupatilo",
+    "type" : "flat",
+    "price" : 50000,
+    "city" : "Belgrade",
+    "address" : "Savski Bulevar 43",
+    "region" : "Savski venac",
+    "sold" : true,
+    "approved" : true,
+    "promoted" : true
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("60d0ebd81f590e4f38192d90"),
+    "description" : "SD Karaburma",
+    "owner" : "jovan123",
+    "size" : 20,
+    "floor" : 12,
+    "maxFloor" : 15,
+    "fitted" : "false",
+    "rented" : true,
+    "pictures" : 1,
+    "rooms" : "garsonjera",
+    "type" : "flat",
+    "price" : 50,
+    "city" : "Kragujevac",
+    "address" : "Mija Kovacevic 7B",
+    "region" : "Palilula",
+    "sold" : null,
+    "approved" : true,
+    "promoted" : false
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("60d10b106f682641002b7e00"),
+    "description" : "Studenjak 4. blok",
+    "owner" : "agency",
+    "size" : 20,
+    "floor" : 2,
+    "maxFloor" : 4,
+    "fitted" : true,
+    "rented" : false,
+    "pictures" : 2,
+    "rooms" : "jednosoban",
+    "type" : "flat",
+    "price" : 25000,
+    "city" : "Belgrade",
+    "address" : "Neka adresa bb",
+    "region" : "Novi Beograd",
+    "approved" : true,
+    "sold" : false,
+    "promoted" : false
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("60d72343c9760935b43a0cf2"),
+    "description" : "Kuca u Grockoj",
+    "city" : "Grocka",
+    "region" : "Grocka",
+    "address" : "Bulevar Oslobodjenja 45",
+    "price" : 400,
+    "floor" : 3,
+    "maxFloor" : null,
+    "size" : 180,
+    "fitted" : true,
+    "rented" : true,
+    "pictures" : 3,
+    "owner" : "jovan123",
+    "rooms" : "2 kupatila, 2 spavace sobe",
+    "type" : "house",
+    "approved" : true,
+    "sold" : null,
+    "promoted" : true,
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("60d72e12c9760935b43a0cf9"),
+    "description" : "Stan na Zvezdari",
+    "city" : "Belgrade",
+    "region" : "Zvezdara",
+    "address" : "Mite Ruzica 145",
+    "price" : 120000,
+    "floor" : 3,
+    "maxFloor" : 6,
+    "size" : 65,
+    "fitted" : false,
+    "rented" : false,
+    "pictures" : 2,
+    "owner" : "agency",
+    "rooms" : "dvosoban",
+    "type" : "flat",
+    "approved" : true,
+    "sold" : true,
+    "promoted" : false,
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("60d906150bed034e0812dd48"),
+    "description" : "kuca na Dedinju",
+    "city" : "Belgrade",
+    "region" : "Dedinje",
+    "address" : "Ulica Mihajla Avramovica 32",
+    "price" : 450000,
+    "floor" : 2,
+    "maxFloor" : null,
+    "size" : 240,
+    "fitted" : true,
+    "rented" : false,
+    "pictures" : 2,
+    "owner" : "koca123",
+    "rooms" : "petosoban",
+    "type" : "house",
+    "approved" : false,
+    "sold" : false,
+    "promoted" : false,
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("60d9067d0bed034e0812dd49"),
+    "description" : "Stan kod Djeram pijace",
+    "owner" : "sasvim_prirodno",
+    "size" : 65,
+    "floor" : 3,
+    "maxFloor" : 8,
+    "fitted" : false,
+    "rented" : true,
+    "pictures" : 3,
+    "rooms" : "dvosoban",
+    "type" : "flat",
+    "price" : 250,
+    "city" : "Belgrade",
+    "address" : "Bulevar kralja Aleksandra 154",
+    "region" : "Vracar",
+    "approved" : true,
+    "promoted" : false
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("60d907960bed034e0812dd4a"),
+    "description" : "Lux stan na Novom Beogradu",
+    "city" : "Belgrade",
+    "region" : "Zemun",
+    "address" : "Bulevar Zorana Djindjica 12",
+    "price" : 150,
+    "floor" : 1,
+    "maxFloor" : 5,
+    "size" : 25,
+    "fitted" : true,
+    "rented" : true,
+    "pictures" : 2,
+    "owner" : "agency",
+    "rooms" : "garsonjera",
+    "type" : "flat",
+    "approved" : true,
+    "sold" : null,
+    "promoted" : true,
+    "__v" : 0
+}
