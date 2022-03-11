@@ -1,0 +1,46 @@
+<h2 style="text-align: center; margin-top: 30px;">Approved Offers Information</h2>
+<hr>
+
+<div style="display: block; text-align: center;">
+    <form class="form">
+        <div class="container" style="align-items: center; justify-content: center;">
+            <div class="row">
+                <div class="col">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Estate</th>
+                                <th scope="col">Owner</th>
+                                <th scope="col">Bidder</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Renting</th>
+                                <th scope="col">From</th>
+                                <th scope="col">To</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let o of offers">
+                                <td>{{o.estate}}</td>
+                                <td>{{ownerMap.get(o.estate)}}</td>
+                                <td>{{o.bidder}}</td>
+                                <td>{{o.price}}</td>
+                                <td>{{o.renting}}</td>
+                                <td *ngIf="o.renting">{{getPrettyDate(o.from.toString())}}</td>
+                                <td *ngIf="o.renting">{{getPrettyDate(o.to.toString())}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col">
+                    <h3>Income:</h3>
+                </div>
+                <div class="col">
+                    <h3>{{calculateIncome()}}&euro;</h3>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
