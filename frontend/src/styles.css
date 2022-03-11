@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+/*body {
+    background: linear-gradient(to right, #78a7ba 0%, #385d6c 50%, #78a7ba 99%);
+} */
+
+body {
+    overflow-x: hidden;
+}
